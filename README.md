@@ -35,7 +35,7 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * sudo dockerd
 * docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
 * docker pull nvcr.io/nvidia/digits:18.01
-* nvidia-docker run -it --rm --net=host --name digits -v /data:/workspace/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
+* nvidia-docker run -it --rm --net=host --name digits -v /data:/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
 * In a new terminal open a shell inside the workspace:
 * docker exec -it digits /bin/bash
 * To show the base directory for the frameworks inside the container:
