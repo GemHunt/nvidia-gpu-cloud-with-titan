@@ -21,12 +21,10 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * Don’t run sudo apt-get update until things don’t work
 * Don’t use sudo until things don’t work
 
-* Add:
-* sudo apt-key add /var/nvidia-driver-local-repo-387.34/7fa2af80.pub
+* add to second script:
 * sudo rm /etc/apt/sources.list.d/cuda.list
-
-
-
+* sudo apt-key add /var/nvidia-driver-local-repo-387.34/7fa2af80.pub
+* Remove reboot at end to make sure the second script works
 
 
 **Using Nvidia GPU Cloud with Titan Usage:**
