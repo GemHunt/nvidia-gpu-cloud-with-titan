@@ -1,6 +1,6 @@
 # nvidia-gpu-cloud-with-titannvidia-gpu-cloud-with-titan
 
-This is my notes the second time I tried this. There is still a permissions issue with Docker.
+This is my notes after third installs.
 
 Once the server is set up the promise of a 5 minute install holds true, but you still need to know the basics of using Docker. 
 
@@ -18,13 +18,12 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * Follow the directions at:
 * http://docs.nvidia.com/ngc/ngc-titan-setup-guide/index.html
 * Make script files by copying out of Firefox(Chrome copies wrong)
-* Don’t run sudo apt-get update until things don’t work
-* Don’t use sudo until things don’t work
 
-* add to second script:
+* I keeping having to run second script more than once. If so:
+* Remove reboot at end to make sure the second script works
+* You might have to run manually:
 * sudo rm /etc/apt/sources.list.d/cuda.list
 * sudo apt-key add /var/nvidia-driver-local-repo-387.34/7fa2af80.pub
-* Remove reboot at end to make sure the second script works
 
 
 **Using Nvidia GPU Cloud with Titan Usage:**
@@ -34,11 +33,11 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * There is an issue that I have to use sudo and I have to manually start the daemon
 * start the docker Daemon: 
 * sudo dockerd
-* sudo docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
-* sudo docker pull nvcr.io/nvidia/digits:18.01
-* sudo nvidia-docker run -it --rm --net=host --name digits -v /data:/workspace/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
+* docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
+* docker pull nvcr.io/nvidia/digits:18.01
+* nvidia-docker run -it --rm --net=host --name digits -v /data:/workspace/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
 * In a new terminal open a shell inside the workspace:
-* sudo docker exec -it digits /bin/bash
+* docker exec -it digits /bin/bash
 * To show the base directory for the frameworks inside the container:
 * cd /opt/ | ls
 * To show the binaries the container has:
