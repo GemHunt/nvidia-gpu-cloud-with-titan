@@ -28,15 +28,15 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 
 
 **Using Nvidia GPU Cloud with Titan Usage:**
-* mkdir ngc
-* cd ngc
-* mkdir digits
+* cd /
+* mkdir digits-jobs
+* mkdir data
 * There is an issue that I have to use sudo and I have to manually start the daemon
 * start the docker Daemon: 
 * sudo dockerd
 * sudo docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
 * sudo docker pull nvcr.io/nvidia/digits:18.01
-* sudo nvidia-docker run -it --rm --net=host --name digits -v /data:/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
+* sudo nvidia-docker run -it --rm --net=host --name digits -v /data:/workspace/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
 * In a new terminal open a shell inside the workspace:
 * sudo docker exec -it digits /bin/bash
 * To show the base directory for the frameworks inside the container:
