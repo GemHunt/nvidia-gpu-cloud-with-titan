@@ -29,11 +29,9 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 
 **Using Nvidia GPU Cloud with Titan Usage:**
 * cd /
-* mkdir digits-jobs
-* mkdir data
-* There is an issue that I have to use sudo and I have to manually start the daemon
-* start the docker Daemon: 
-* sudo dockerd
+* sudo mkdir digits-jobs
+* sudo mkdir data
+* login(you need to paste in your key): 
 * docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
 * docker pull nvcr.io/nvidia/digits:18.01
 * nvidia-docker run -it --rm --net=host --name digits -v /data:/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
@@ -46,7 +44,7 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 
 ***********************************************************************************
 
-**I put chrome & ssh on local machines:**
+**I put Chrome & ssh on local machines:**
 * sudo apt-get install libxss1 libappindicator1 libindicator7
 * wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 * sudo dpkg -i google-chrome*.deb
@@ -55,19 +53,15 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 ***********************************************************************************
 **Docker tasks for myself**
 * Write a script to start a container on system startup
-* Fix the permissions issue 
 
-**Docker notes for myself:**
+**Links for myself:**
 * https://ngc.nvidia.com
 * http://docs.nvidia.com/ngc/ngc-user-guide/index.html
 * https://github.com/NVIDIA/nvidia-docker/wiki/
 * https://hub.docker.com/r/nvidia/
 * https://github.com/NVIDIA/nvidia-docker/wiki/Third-party
-* Why does nvidia sometimes say nvidia-docker or just docker:
-* nvidia-docker only modifies the behavior of the run and create Docker commands
-* http://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
 
-**Docker commands**
+**Useful Docker commands**
 * start the docker Daemon: sudo dockerd
 * List containers:
 * sudo docker ps
