@@ -37,7 +37,7 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * nvidia-docker run -it --rm --net=host --name digits -v /data:/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
 * In a new terminal open a shell inside the workspace:
 * docker exec -it digits /bin/bash
-* To show the base directory for the frameworks inside the container:
+* The base directory for the frameworks(caffe/tensorflow/digits/etc) inside the container:
 * cd /opt/ | ls
 * To show the binaries the container has:
 * cd/usr/local/bin
