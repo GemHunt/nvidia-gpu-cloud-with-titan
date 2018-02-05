@@ -43,10 +43,13 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * To show the binaries the container has:
 * cd/usr/local/bin
 
-**I put chrome on local machines:**
+***********************************************************************************
+
+**I put chrome & ssh on local machines:**
 * sudo apt-get install libxss1 libappindicator1 libindicator7
 * wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 * sudo dpkg -i google-chrome*.deb
+* sudo apt-get install openssh-server
 
 ***********************************************************************************
 **Docker tasks for myself**
