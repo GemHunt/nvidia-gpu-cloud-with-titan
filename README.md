@@ -40,9 +40,8 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * sudo apt-get install terminator
 
 **Using Nvidia GPU Cloud with Titan Usage:**
-* cd /
-* sudo mkdir workspace
-* cd workspace
+* sudo mkdir /workspace
+* cd /workspace
 * sudo mkdir jobs
 * cd jobs
 * login(you need to paste in your key): 
