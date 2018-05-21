@@ -38,6 +38,9 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * sudo dpkg -i google-chrome*.deb
 * sudo apt-get install openssh-server
 * sudo apt-get install terminator
+* download PyCharm Community to ~/pycharm
+  https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=linux&code=PCC
+
 
 **Using Nvidia GPU Cloud with Titan Usage:**
 * sudo mkdir /workspace
@@ -55,6 +58,9 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * To show the binaries the container has:
 * cd/usr/local/bin
 
+**Other setup :**
+* Git clone required git repos
+* Move common shell scripts to: /~ and /workspace/jobs/
 ***********************************************************************************
 **Docker tasks for myself**
 * Write a script to start a container on system startup
