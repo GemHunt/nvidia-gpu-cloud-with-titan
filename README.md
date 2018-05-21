@@ -15,6 +15,10 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * “Erase Disk and install Ubuntu”: Install Now
 * On first start up make sure 4.10 kernel is running by typing:
 * uname -a
+* you might have to edit grub to get 4.10 kernel to boot:
+*      sudo gedit /etc/default/grub
+*       sudo update-grub
+
 * Follow the directions at:
 * http://docs.nvidia.com/ngc/ngc-titan-setup-guide/index.html
 * Make script files by copying out of Firefox(Chrome copies wrong)
@@ -27,10 +31,20 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * Then run the second script again, then reboot. 
 * Run the 3rd and forth scripts. 
 
+***********************************************************************************
+**Software to install on local machines:**
+* sudo apt-get install libxss1 libappindicator1 libindicator7
+* wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+* sudo dpkg -i google-chrome*.deb
+* sudo apt-get install openssh-server
+* sudo apt-get install terminator
+
 **Using Nvidia GPU Cloud with Titan Usage:**
 * cd /
-* sudo mkdir digits-jobs
-* sudo mkdir data
+* sudo mkdir workspace
+* cd workspace
+* sudo mkdir jobs
+* cd jobs
 * login(you need to paste in your key): 
 * docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
 * docker pull nvcr.io/nvidia/digits:18.01
@@ -41,14 +55,6 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * cd /opt/ | ls
 * To show the binaries the container has:
 * cd/usr/local/bin
-
-***********************************************************************************
-
-**I put Chrome & ssh on local machines:**
-* sudo apt-get install libxss1 libappindicator1 libindicator7
-* wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-* sudo dpkg -i google-chrome*.deb
-* sudo apt-get install openssh-server
 
 ***********************************************************************************
 **Docker tasks for myself**
