@@ -1,6 +1,6 @@
 # nvidia-gpu-cloud-with-titannvidia-gpu-cloud-with-titan
 
-This is my notes after third installs.
+This is my notes after 6-7 installs.
 
 Once the server is set up the promise of a 5 minute install holds true, but you still need to know the basics of using Docker. 
 
@@ -46,8 +46,8 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * cd jobs
 * login(you need to paste in your key): 
 * docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'Qt4M2VkL---------Your API KEY -------3ZGZZmNIw'
-* docker pull nvcr.io/nvidia/digits:18.01
-* nvidia-docker run -it --rm --net=host --name digits -v /data:/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.01
+* docker pull nvcr.io/nvidia/digits:18.04
+* nvidia-docker run -it --rm --net=host --name digits -v /data:/data -v /digits-jobs:/workspace/jobs nvcr.io/nvidia/digits:18.04
 * In a new terminal open a shell inside the workspace:
 * docker exec -it digits /bin/bash
 * The base directory for the frameworks(caffe/tensorflow/digits/etc) inside the container:
