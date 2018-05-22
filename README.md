@@ -40,6 +40,9 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * sudo apt-get install terminator
 * download PyCharm Community to ~/pycharm
   https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=linux&code=PCC
+* samba:
+  https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!
+
 
 
 **Using Nvidia GPU Cloud with Titan Usage:**
