@@ -9,7 +9,7 @@ Once the server is set up the promise of a 5 minute install holds true, but you 
 * http://docs.nvidia.com/ngc/ngc-titan-setup-guide/index.html
 * Burn 16.04.3 Desktop AMD64 Aug 2017 ISO to DVD
 * (They really should state the exact ISO to pull.) 
-* https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/
+* http://releases.ubuntu.com/16.04/
 * Don’t check the boxes for “download updates or install third party software”
 * Force UEFI Installation:click “Go Back” 
 * “Erase Disk and install Ubuntu”: Install Now
